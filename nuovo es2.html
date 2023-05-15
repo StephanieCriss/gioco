@@ -1,0 +1,62 @@
+<html>
+<head>
+<body>
+<h1 id="titolo"> Benvenuto </h1>
+<h2 id="informazioni"> Fai la tua scelta: </h2>
+<h3> <input type="checkbox" id="carta" onclick ="cliccatocarta()"  > CARTA </h3>
+<h3> <input type="checkbox" id="forbici" onclick ="cliccatoforbici()"> FORBICI </h3>
+<h3> <input type="checkbox" id="sasso" onclick ="cliccatosasso()">  SASSO </h3>
+<button id ="pulsante" onclick ="verdetto()"> Clicca per vedere se hai vinto </button> 
+<script > 
+alert("Sono Javascript e sono pronto a servirti");
+
+var nomegiocatore = window.prompt("Ciao, inserisci il tuo nome: ");
+document.getElementById("titolo").innerHTML = "Benvenuto " + nomegiocatore; 
+
+var sceltautente;
+
+function cliccatocarta() {
+	
+	sceltautente = "carta";
+	alert(nomegiocatore + " hai scelto "+ sceltautente);	
+}
+
+function cliccatoforbici() {
+	
+	sceltautente = "forbici";
+	alert(nomegiocatore + " hai scelto "+ sceltautente);	
+}
+
+function cliccatosasso() {
+	
+	sceltautente = "sasso";
+	alert(nomegiocatore + " hai scelto "+ sceltautente);	
+}
+
+function verdetto() {
+
+var sceltacomputer;
+if (sceltautente == "carta"){
+	sceltacomputer = "forbici";	
+}
+if (sceltautente == "forbici"){
+	sceltacomputer = "sasso";	
+}
+if (sceltautente == "sasso"){
+	sceltacomputer = "carta";	
+}
+<!-- document.getElementById("titolo").innerHTML = nomegiocatore + " hai perso :("; -->
+<!-- document.getElementById("informazioni").innerHTML = "Il computer ha scelto " + sceltacomputer + ". Tu hai scelto " + sceltautente+".";  -->
+alert (nomegiocatore + " hai perso :(" + " Il computer ha scelto " + sceltacomputer + ". Tu hai scelto " + sceltautente+"."); 	
+<!-- document.getElementById("carta").style.display='none';  -->
+<!-- document.getElementById("forbici").style.display='none';  -->
+<!-- document.getElementById("sasso").style.display='none';  -->
+<!-- document.getElementById("pulsante").style.display='none';  -->
+
+}
+
+ </script> 
+</head>
+</body>
+</html>
+
